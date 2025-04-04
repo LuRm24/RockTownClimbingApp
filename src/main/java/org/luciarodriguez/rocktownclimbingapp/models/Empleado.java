@@ -1,9 +1,9 @@
 package org.luciarodriguez.rocktownclimbingapp.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Empleado {
@@ -15,4 +15,9 @@ public class Empleado {
     private String rol;
     private String dni;
     private String direccion;
+    private String nombreUsuario;
+    private String email;
+    private String contrasenaHash;
+    @OneToMany(mappedBy = "empleado")
+    private List<Actividad> actividades = new ArrayList<>();
 }

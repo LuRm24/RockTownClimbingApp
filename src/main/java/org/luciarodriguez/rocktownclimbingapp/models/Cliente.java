@@ -22,4 +22,9 @@ public class Cliente {
 
     @OneToMany(mappedBy = "cliente")
     private List<Reserva> reservas = new ArrayList<>();
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Entrada> entradas = new ArrayList<>();
+
+
 }

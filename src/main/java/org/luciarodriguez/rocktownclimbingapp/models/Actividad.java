@@ -13,6 +13,8 @@ public class Actividad {
     private String nombre;
     private String descripcion;
 
+    @ManyToOne
+    private Empleado empleado;
 
     @OneToMany(mappedBy = "actividad")
     private List<Reserva> reservas = new ArrayList<>();

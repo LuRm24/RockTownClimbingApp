@@ -11,7 +11,6 @@ public class HorarioDisponible {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private DayOfWeek diaSemana;
     private LocalTime horaInicio;
     private LocalTime horaFin;

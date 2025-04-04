@@ -15,4 +15,7 @@ public class Sala {
 
     @OneToMany(mappedBy = "sala")
     private List<HorarioDisponible> horarios = new ArrayList<>();
+
+    @OneToMany(mappedBy = "sala")
+    private List<Reserva> reservas = new ArrayList<>();
 }

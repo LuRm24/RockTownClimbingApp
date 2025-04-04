@@ -15,9 +15,6 @@ public class Reserva {
     private LocalTime hora;
 
     @ManyToOne
-    private Usuario usuario;
-
-    @ManyToOne
     private Cliente cliente;
     @ManyToOne
     private Sala sala;

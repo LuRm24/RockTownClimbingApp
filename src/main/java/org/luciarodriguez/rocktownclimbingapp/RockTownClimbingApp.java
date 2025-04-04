@@ -10,7 +10,7 @@ public class RockTownClimbingApp {
         SpringApplication.run(RockTownClimbingApp.class, args);
 
         //Iniciamos servidor
-        Servidor servidor = new Servidor();
-        servidor.arrancarServidor();
+        //Servidor servidor = new Servidor();
+        //servidor.arrancarServidor();
     }
 }

@@ -4,7 +4,6 @@ import org.luciarodriguez.rocktownclimbingapp.models.Empleado;
 import org.luciarodriguez.rocktownclimbingapp.services.EmpleadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -20,4 +19,5 @@ public class EmpleadoController {
     @PostMapping
     public Empleado save(@RequestBody Empleado empleado) {
         return service.save(empleado); }
-}
+
+    }

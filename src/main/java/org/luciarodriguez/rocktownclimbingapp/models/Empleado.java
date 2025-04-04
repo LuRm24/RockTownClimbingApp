@@ -1,11 +1,15 @@
 package org.luciarodriguez.rocktownclimbingapp.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +24,5 @@ public class Empleado {
     private String contrasenaHash;
     @OneToMany(mappedBy = "empleado")
     private List<Actividad> actividades = new ArrayList<>();
+
 }

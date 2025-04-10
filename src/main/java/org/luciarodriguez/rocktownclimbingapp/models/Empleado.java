@@ -7,9 +7,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +25,10 @@ public class Empleado {
     @OneToMany(mappedBy = "empleado")
     private List<Actividad> actividades = new ArrayList<>();
 
+    @OneToMany(mappedBy = "empleado")
+    private List<Recordatorio> recordatorios = new ArrayList<>();
+
+    public String getContrasenaHash() {
+        return contrasenaHash;
+    }
 }
